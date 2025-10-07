@@ -1,0 +1,130 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Home Network" id="home-network-diagram">
+    <mxGraphModel dx="1359" dy="693" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Cloud / Internet -->
+        <mxCell id="cloud-1" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cloud-label" value="&lt;b&gt;Internet&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="225" width="80" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ISP Router/Modem -->
+        <mxCell id="router-1" value="" style="image;html=1;image=img/lib/clip_art/networking/Router_Icon_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="250" y="210" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="router-label" value="&lt;b&gt;ISP router / modem&lt;/b&gt;&lt;br&gt;&lt;i&gt;unknown&lt;/i&gt;&lt;br&gt;192.168.0.1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="230" y="150" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Connection from Cloud to Router -->
+        <mxCell id="conn-cloud-router" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;strokeColor=#666666;" edge="1" parent="1" source="cloud-1" target="router-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="240" as="sourcePoint" />
+            <mxPoint x="250" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Main horizontal line from router -->
+        <mxCell id="main-line" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=3;strokeColor=#1ba1e2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="240" as="sourcePoint" />
+            <mxPoint x="900" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Mobile Device -->
+        <mxCell id="mobile-1" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.mobile_device;" vertex="1" parent="1">
+          <mxGeometry x="420" y="50" width="30" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile-conn" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;strokeColor=#1ba1e2;" edge="1" parent="1" source="mobile-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="435" y="100" as="sourcePoint" />
+            <mxPoint x="435" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mobile-label" value="&lt;b&gt;Mobile&lt;/b&gt;&lt;br&gt;&lt;i&gt;unknown&lt;/i&gt;&lt;br&gt;dhcp" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="395" y="10" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile-wifi" value="" style="fontColor=#0066CC;verticalAlign=top;verticalLabelPosition=bottom;labelPosition=center;align=center;html=1;outlineConnect=0;fillColor=#CCCCCC;strokeColor=#6881B3;gradientColor=none;gradientDirection=north;strokeWidth=2;shape=mxgraph.networks.wireless_hub;" vertex="1" parent="1">
+          <mxGeometry x="380" y="60" width="20" height="15" as="geometry" />
+        </mxCell>
+
+        <!-- Computer 1 -->
+        <mxCell id="computer-1" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.workstation_pc;" vertex="1" parent="1">
+          <mxGeometry x="540" y="50" width="53" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="computer1-conn" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;strokeColor=#1ba1e2;" edge="1" parent="1" source="computer-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="566.5" y="109" as="sourcePoint" />
+            <mxPoint x="566.5" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="computer1-label" value="&lt;b&gt;Computer&lt;/b&gt;&lt;br&gt;&lt;i&gt;unknown&lt;/i&gt;&lt;br&gt;dhcp" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="526.5" y="10" width="80" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Computer 2 -->
+        <mxCell id="computer-2" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.workstation_pc;" vertex="1" parent="1">
+          <mxGeometry x="650" y="50" width="53" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="computer2-conn" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;strokeColor=#1ba1e2;" edge="1" parent="1" source="computer-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="676.5" y="109" as="sourcePoint" />
+            <mxPoint x="676.5" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="computer2-label" value="&lt;b&gt;Computer&lt;/b&gt;&lt;br&gt;&lt;i&gt;unknown&lt;/i&gt;&lt;br&gt;dhcp" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="636.5" y="10" width="80" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Study Computer (iMac) -->
+        <mxCell id="imac-1" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.workstation_pc;" vertex="1" parent="1">
+          <mxGeometry x="760" y="50" width="53" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="imac-conn" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;strokeColor=#1ba1e2;" edge="1" parent="1" source="imac-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="786.5" y="109" as="sourcePoint" />
+            <mxPoint x="786.5" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="imac-label" value="&lt;b&gt;Study Computer&lt;/b&gt;&lt;br&gt;&lt;i&gt;Apple iMac&lt;/i&gt;&lt;br&gt;dhcp" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="736.5" y="10" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Laptop -->
+        <mxCell id="laptop-1" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.devices.laptop;" vertex="1" parent="1">
+          <mxGeometry x="420" y="350" width="58" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="laptop-conn" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;strokeColor=#1ba1e2;" edge="1" parent="1" target="laptop-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="449" y="240" as="sourcePoint" />
+            <mxPoint x="449" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="laptop-label" value="&lt;b&gt;Laptop&lt;/b&gt;&lt;br&gt;&lt;i&gt;unknown&lt;/i&gt;&lt;br&gt;dhcp" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="409" y="390" width="80" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Network Printer -->
+        <mxCell id="printer-1" value="" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#434445;aspect=fixed;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.vvd.printer;" vertex="1" parent="1">
+          <mxGeometry x="870" y="350" width="46.8" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="printer-conn" value="" style="endArrow=none;html=1;rounded=0;strokeWidth=2;strokeColor=#1ba1e2;" edge="1" parent="1" target="printer-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="893.4" y="240" as="sourcePoint" />
+            <mxPoint x="893.4" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="printer-label" value="&lt;b&gt;Networkprinter&lt;/b&gt;&lt;br&gt;&lt;i&gt;unknown brand&lt;/i&gt;&lt;br&gt;192.168.1.200" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="843.4" y="405" width="100" height="45" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
